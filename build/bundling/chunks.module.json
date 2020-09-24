@@ -1,0 +1,81 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.44.2",
+  "hash": "0c11f52dcd20dad97a23",
+  "publicPath": "/static/",
+  "outputPath": "/Users/natalieclamp/dev/personal/jvcparry/jvcparry/build/static",
+  "assetsByChunkName": {
+    "jvcparry": "jvcparry.module.js",
+    "list": "list.module.js"
+  },
+  "assets": [
+    {
+      "name": "jvcparry.module.js",
+      "size": 5072384,
+      "chunks": [
+        "jvcparry"
+      ],
+      "chunkNames": [
+        "jvcparry"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "list.module.js",
+      "size": 47989,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "jvcparry": {
+      "chunks": [
+        "jvcparry"
+      ],
+      "assets": [
+        "jvcparry.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "jvcparry": {
+      "chunks": [
+        "jvcparry"
+      ],
+      "assets": [
+        "jvcparry.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": []
+}
