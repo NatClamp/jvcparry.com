@@ -5,7 +5,7 @@ const Shop = ({ state, actions, libraries }) => {
 
   return (
     <Container>
-      <h1>Shop</h1>
+      <h1>Shopiiiii</h1>
     </Container>
   );
 };

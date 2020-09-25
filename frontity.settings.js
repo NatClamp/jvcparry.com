@@ -16,7 +16,6 @@ const settings = {
             ["Home", "/"],
             ["Shop", "/shop/"],
             ["Posts", "/posts/"],
-            ["DnD", "/posts/category/adventures/"]
           ],
           isMobileMenuOpen: false,
           featured: {
@@ -31,8 +30,8 @@ const settings = {
       "state": {
         "source": {
           "api": "https://public-api.wordpress.com/wp/v2/sites/jvcparry.com",
-          "postsPage": "/posts/",
-          "homepage": "/"
+          "homepage": "/",
+          "postsPage":"/posts"
         }
       }
     },

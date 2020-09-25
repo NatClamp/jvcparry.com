@@ -17,11 +17,7 @@ const jvcparryTheme = {
      * relevant state. It is scoped to the `theme` namespace.
      */
     theme: {
-      menu: [
-        ["Home", "/"],
-        ["Shop", "/shop/"],
-        ["Posts", "/posts/"]
-      ],
+      menu: [],
       isMobileMenuOpen: false,
       featured: {
         showOnList: false,
