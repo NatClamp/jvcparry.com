@@ -1,11 +1,14 @@
+import React from 'react'
 import { connect, styled } from "frontity";
-
+import Promotion from "./promotion";
+import AboutMe from "./about-me";
 
 const Home = ({ state, actions, libraries }) => {
 
   return (
     <Container>
-      <h1>Hello</h1>
+      {/* <Promotion /> */}
+      {/* <AboutMe /> */}
     </Container>
   );
 };
@@ -24,3 +27,4 @@ const Title = styled.h1`
   margin-bottom: 8px;
   color: rgba(12, 17, 43);
 `;
+
