@@ -2,46 +2,36 @@ const settings = {
   "name": "jvcparry",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "https://jvcparry.com",
+      "title": "JVC Parry",
+      "description": "JVC Parry: indie TTRPG creator"
     }
   },
   "packages": [
     {
-      "name": "@frontity/mars-theme",
+      "name": "jvcparry-theme",
       "state": {
-        "theme": {
-          "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Adventures",
-              "/category/adventures/"
-            ],
-            [
-              "DnD",
-              "/category/dungeons-and-dragons/"
-            ],
-            [
-              "Reviews",
-              "/category/review/"
-            ]
+        theme: {
+          menu: [
+            ["Shop", "/shop/"],
+            ["Hire", "/hire-me/"],
+            ["Blog", "/blog/"],
           ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
-        }
+          isMobileMenuOpen: false,
+          featured: {
+            showOnList: false,
+            showOnPost: false,
+          },
+        },
       }
     },
     {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://public-api.wordpress.com/wp/v2/sites/jvcparry.com"
+          "api": "https://public-api.wordpress.com/wp/v2/sites/jvcparry.com",
+          "homepage": "/",
+          "postsPage":"/blog",
         }
       }
     },

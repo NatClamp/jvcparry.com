@@ -2,17 +2,46 @@
   "errors": [],
   "warnings": [],
   "version": "4.44.2",
-  "hash": "0c11f52dcd20dad97a23",
+  "hash": "4fe4af01925ea477c331",
   "publicPath": "/static/",
-  "outputPath": "/Users/natalieclamp/dev/personal/jvcparry/jvcparry/build/static",
+  "outputPath": "/Users/natalieclamp/dev/personal/jvcparry/build/static",
   "assetsByChunkName": {
-    "jvcparry": "jvcparry.module.js",
+    "jvcparry": [
+      "jvcparry.module.js",
+      "jvcparry.04fcf32ea20335213906.hot-update.js"
+    ],
     "list": "list.module.js"
   },
   "assets": [
     {
+      "name": "04fcf32ea20335213906.hot-update.json",
+      "size": 50,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "jvcparry.04fcf32ea20335213906.hot-update.js",
+      "size": 33120,
+      "chunks": [
+        "jvcparry"
+      ],
+      "chunkNames": [
+        "jvcparry"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "jvcparry.module.js",
-      "size": 5072384,
+      "size": 6846650,
       "chunks": [
         "jvcparry"
       ],
@@ -24,7 +53,7 @@
     },
     {
       "name": "list.module.js",
-      "size": 47989,
+      "size": 47983,
       "chunks": [
         "list"
       ],
@@ -42,7 +71,8 @@
         "jvcparry"
       ],
       "assets": [
-        "jvcparry.module.js"
+        "jvcparry.module.js",
+        "jvcparry.04fcf32ea20335213906.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -54,7 +84,8 @@
         "jvcparry"
       ],
       "assets": [
-        "jvcparry.module.js"
+        "jvcparry.module.js",
+        "jvcparry.04fcf32ea20335213906.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
