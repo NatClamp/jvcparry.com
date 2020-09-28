@@ -13,9 +13,9 @@ const settings = {
       "state": {
         theme: {
           menu: [
-            ["Home", "/"],
             ["Shop", "/shop/"],
-            ["Posts", "/posts/"],
+            ["Hire", "/hire-me/"],
+            ["Blog", "/blog/"],
           ],
           isMobileMenuOpen: false,
           featured: {
@@ -31,7 +31,7 @@ const settings = {
         "source": {
           "api": "https://public-api.wordpress.com/wp/v2/sites/jvcparry.com",
           "homepage": "/",
-          "postsPage":"/posts"
+          "postsPage":"/blog",
         }
       }
     },
