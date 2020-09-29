@@ -1,11 +1,13 @@
 import React from "react";
 import { connect, styled } from "frontity";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 import Link from "./link";
 
 const NewsletterForm = ({ state }) => {
   return (
     <>
       <Container>
+        <MailchimpSubscribe url={state.env.mailchimpURL} />
       </Container>
     </>
   );
