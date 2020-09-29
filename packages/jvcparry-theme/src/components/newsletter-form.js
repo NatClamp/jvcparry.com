@@ -1,28 +1,89 @@
 import React from "react";
-import { connect, styled } from "frontity";
-import MailchimpSubscribe from "react-mailchimp-subscribe"
-import Link from "./link";
+import { connect, styled, css } from "frontity";
+import Mailchimp from 'react-mailchimp-form';
 
 const NewsletterForm = ({ state }) => {
   return (
     <>
       <Container>
-        <MailchimpSubscribe url={state.env.mailchimpURL} />
+        <SignUp>Sign up for my newsletter:</SignUp>
+        <Mailchimp action={state.env.mailchimpURL}
+          fields={[
+            {
+              name: 'EMAIL',
+              placeholder: 'Email',
+              type: 'email',
+              required: true,
+            }
+          ]}
+          messages={
+            {
+              empty: "Please enter your email address",
+              button: "Subscribe"
+            }
+          }
+          css={form} />
       </Container>
     </>
   );
 };
 
-// Connect the NewsletterForm component to get access to the `state` in it's `props`
 export default connect(NewsletterForm);
 
-const Container = styled.footer`
+const Container = styled.div`
   display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding: 20px 30px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 20px 20px 0;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 20px;
+  }
+
 `;
 
-// const StyledLink = styled(Link)`
-//   text-decoration: none;
-// `;
+const form = css`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  input {
+    padding: 10px;
+    min-width: 200px;
+    width: 400px;
+    margin: 0 20px 0 0;
+    font-size: 14px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  button {
+    padding: 10px 24px;
+    background-color: white;
+    font-size: 14px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  
+  .msg-alert {
+    margin-top: 10px;
+    max-height: 20px;
+      p {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+`;
+
+const SignUp = styled.p`
+  font-size: 14px;
+`;

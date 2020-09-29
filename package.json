@@ -29,6 +29,6 @@
     "dotenv": "8.2.0",
     "frontity": "^1.11.1",
     "jvcparry-theme": "file:packages/jvcparry-theme",
-    "react-mailchimp-subscribe": "2.1.0"
+    "react-mailchimp-form": "1.0.2"
   }
 }
