@@ -72,7 +72,7 @@ const FooterLeft = styled.div`
 const FooterRight = styled.div`
   width: 40%;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1250px) {
     width: 50%
   }
 
