@@ -9,7 +9,7 @@ import Link from "./link";
  */
 const Nav = ({ state }) => (
   <HomeHeroNavContainer >
-      {state.theme.menu.map(([name, link]) => {
+    {state.theme.menu.map(([name, link]) => {
       return (
         <HomeHeroNavItem key={name}>
           <Link link={link}>
@@ -34,8 +34,11 @@ const HomeHeroNavContainer = styled.nav`
   font-size: 1em;
   margin: 20px;
 
-  @media screen and (max-width: 560px) {
-    // display: none;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
   }
 `;
 
@@ -46,6 +49,13 @@ const HomeHeroNavItem = styled.div`
   font-size: 1em;
   box-sizing: border-box;
   flex-shrink: 0;
+  text-align:center;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+    
+  }
 
   & > a {
     display: inline-block;
@@ -53,23 +63,29 @@ const HomeHeroNavItem = styled.div`
     border: 2px solid;
     border-radius: 5px;
     padding: 5px 24px;
+    margin: 0 auto;
+    width: 120px;
     /* Use for semantic approach to style the current link */
     &[aria-current="page"] {
       border-color: transparent;
     }
   }
 
-  &:first-of-type {
-    margin-left: 0;
-  }
+    @media screen and (min-width: 500px) {
+      &:first-of-type {
+        margin-left: 0;
+      }
 
-  &:last-of-type {
-    margin-right: 0;
+      &:last-of-type {
+        margin-right: 0;
 
-    &:after {
-      content: "";
-      display: inline-block;
-      width: 24px;
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 24px;
+      }
     }
   }
+
+
 `;

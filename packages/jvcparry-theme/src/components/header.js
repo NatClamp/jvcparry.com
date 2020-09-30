@@ -30,6 +30,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  
+  @media screen and (max-width: 560px) {
+    min-height: 100px;
+  }
 `;
 
 const Title = styled.h2`

@@ -70,8 +70,11 @@ const FooterLeft = styled.div`
 `;
 
 const FooterRight = styled.div`
-  // background-color: yellow;
-  width: 50%;
+  width: 40%;
+
+  @media screen and (max-width: 1024px) {
+    width: 50%
+  }
 
   @media screen and (max-width: 768px) {
     width: 100%;
