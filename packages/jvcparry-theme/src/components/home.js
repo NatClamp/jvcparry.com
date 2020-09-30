@@ -16,7 +16,7 @@ const Home = ({ state, actions, libraries }) => {
 export default connect(Home);
 
 const Container = styled.div`
-  width: 800px;
+  width: 1000px;
   margin: 0;
   padding: 24px;
 `;

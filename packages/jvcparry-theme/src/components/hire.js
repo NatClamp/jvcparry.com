@@ -5,7 +5,7 @@ const Hire = ({ state, actions, libraries }) => {
 
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
-  const Html2React = libraries.html2react.Component; 
+  const Html2React = libraries.html2react.Component;
 
   return (
     <Container>
@@ -18,7 +18,7 @@ const Hire = ({ state, actions, libraries }) => {
 export default connect(Hire);
 
 const Container = styled.div`
-  width: 800px;
+  width: 1000px;
   margin: 0;
   padding: 24px;
 `;
