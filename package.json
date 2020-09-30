@@ -26,7 +26,9 @@
     "@frontity/mars-theme": "./packages/mars-theme",
     "@frontity/tiny-router": "^1.2.1",
     "@frontity/wp-source": "^1.8.4",
+    "dotenv": "8.2.0",
     "frontity": "^1.11.1",
-    "jvcparry-theme": "file:packages/jvcparry-theme"
+    "jvcparry-theme": "file:packages/jvcparry-theme",
+    "react-mailchimp-form": "1.0.2"
   }
 }

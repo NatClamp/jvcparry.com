@@ -1,3 +1,7 @@
+import { config } from "dotenv";
+
+config();
+
 const settings = {
   "name": "jvcparry",
   "state": {
@@ -5,6 +9,9 @@ const settings = {
       "url": "https://jvcparry.com",
       "title": "JVC Parry",
       "description": "JVC Parry: indie TTRPG creator"
+    },
+    "env": {
+      "mailchimpURL": process.env.REACT_APP_MAILCHIMP_URL,
     }
   },
   "packages": [
@@ -31,7 +38,7 @@ const settings = {
         "source": {
           "api": "https://public-api.wordpress.com/wp/v2/sites/jvcparry.com",
           "homepage": "/",
-          "postsPage":"/blog",
+          "postsPage": "/blog",
         }
       }
     },
