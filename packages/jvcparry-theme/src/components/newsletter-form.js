@@ -36,7 +36,7 @@ const Container = styled.div`
   justify-content: flex-start;
   margin: 0 20px 20px 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     margin: 0 20px;
   }
 
@@ -47,24 +47,23 @@ const form = css`
   display: flex;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
   }
 
-  @media screen and (min-width: 415px) and (max-width: 768px) {
-    width: 75%;
+  @media screen and (min-width: 415px) and (max-width: 1000px) {
     margin: 0 auto;
   }
 
   input {
     padding: 10px;
     min-width: 300px;
-    max-width: 550px;
+    max-width: 100%;
     margin: 0 20px 0 0;
     font-size: 14px;
     border-radius: 5px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
       margin: 0 0 10px 0;
     }
   }
@@ -75,7 +74,7 @@ const form = css`
     font-size: 14px;
     border-radius: 5px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
       width: 100%;
     }
   }
@@ -93,8 +92,7 @@ const form = css`
 
 const SignUp = styled.p`
   font-size: 14px;
-  @media screen and (min-width: 415px) and (max-width: 768px) {
+  @media screen and (min-width: 415px) and (max-width: 1000px) {
     width: 75%;
-    margin: 10px auto;
   }
 `;
