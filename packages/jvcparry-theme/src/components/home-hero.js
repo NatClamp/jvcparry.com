@@ -7,6 +7,7 @@ const Header = ({ state }) => {
     <>
       <HeroContainer>
         <HeroInner>
+          <img src="https://jvcparry.files.wordpress.com/2020/08/cropped-jvcp-logo-inverted.png" alt="" />
           <Title>JVC Parry</Title>
           <Description>Indie TTRPG creator</Description>
           <HomeHeroNav />
@@ -27,6 +28,11 @@ const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+
+  img {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
 `;
 
 const HeroInner = styled.div`
