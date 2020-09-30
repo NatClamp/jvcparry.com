@@ -51,7 +51,7 @@ const Container = styled.footer`
   padding: 20px 0;
   color: #fff;
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
   }
 `;
@@ -63,7 +63,7 @@ const FooterLeft = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     width: 100%;
   }
 
@@ -74,6 +74,10 @@ const FooterRight = styled.div`
 
   @media screen and (max-width: 1200px) {
     width: 50%
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 75%;
   }
 
   @media screen and (max-width: 768px) {
@@ -90,7 +94,7 @@ const SocialLinksContainer = styled.div`
   font-size: 1.5em;
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     width: 100%;
     align-items: center;
     margin-top: 20px;
@@ -101,9 +105,7 @@ const Copyright = styled.p`
   font-size: 16px;
   padding-left: 20px;
 
-
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     justify-content: center;
     align-items: center;
     text-align: center;
