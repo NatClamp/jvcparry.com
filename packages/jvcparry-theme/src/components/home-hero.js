@@ -6,7 +6,7 @@ const Header = ({ state }) => {
   return (
     <>
       <HeroContainer>
-        <HeroInner>        
+        <HeroInner>
           <Title>JVC Parry</Title>
           <Description>Indie TTRPG creator</Description>
           <HomeHeroNav />
@@ -34,6 +34,10 @@ const HeroInner = styled.div`
   flex-direction: column;
   align-items: center;
   font-size: 2em;
+  @media screen and (max-width: 768px) {
+    margin: 0 20px;
+    font-size: 1.75em;
+  }
 `;
 
 const Title = styled.h2`
