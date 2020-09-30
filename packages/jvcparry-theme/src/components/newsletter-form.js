@@ -52,7 +52,6 @@ const form = css`
   }
 
   @media screen and (min-width: 415px) and (max-width: 768px) {
-    width: 75%;
     margin: 0 auto;
   }
 

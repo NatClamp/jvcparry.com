@@ -34,7 +34,7 @@ const HomeHeroNavContainer = styled.nav`
   font-size: 1em;
   margin: 20px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -51,7 +51,7 @@ const HomeHeroNavItem = styled.div`
   flex-shrink: 0;
   text-align:center;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     
@@ -71,7 +71,7 @@ const HomeHeroNavItem = styled.div`
     }
   }
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 768px) {
       &:first-of-type {
         margin-left: 0;
       }
