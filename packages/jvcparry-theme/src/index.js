@@ -31,11 +31,6 @@ const jvcparryTheme = {
    */
   actions: {
     theme: {
-      beforeSSR: async ({ state, actions }) => {
-        // We fetch the initial link.
-        await actions.source.fetch(state.router.link);
-        // NOTE: This is not needed if autoFetch is activated in your router.
-      },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
       },

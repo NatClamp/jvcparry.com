@@ -23,6 +23,8 @@ const jvcparryTheme = {
         showOnList: false,
         showOnPost: false,
       },
+      shopifyProducts: [],
+
     },
   },
   /**
@@ -36,6 +38,9 @@ const jvcparryTheme = {
       },
       closeMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = false;
+      },
+      addShopifyProducts: ({ state }) => products => {
+        state.theme.shopifyProducts = [...products];
       },
     },
   },

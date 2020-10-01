@@ -26,9 +26,12 @@
     "@frontity/mars-theme": "./packages/mars-theme",
     "@frontity/tiny-router": "^1.2.1",
     "@frontity/wp-source": "^1.8.4",
+    "@shopify/buy-button-js": "^2.1.7",
     "dotenv": "8.2.0",
     "frontity": "^1.11.1",
     "jvcparry-theme": "file:packages/jvcparry-theme",
-    "react-mailchimp-form": "1.0.2"
-  }
+    "react-mailchimp-form": "1.0.2",
+    "shopify-buy": "2.11.0"
+  },
+  "devDependencies": {}
 }
