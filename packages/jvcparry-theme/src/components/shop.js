@@ -1,20 +1,29 @@
-import React from 'react'
-import { connect, styled } from "frontity";
+import { React, useEffect } from 'react'
+import { connect, styled, fetch } from "frontity";
 
 const Shop = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
 
-  const getProducts = state.client.product.fetchAll().then((products) => {
-    actions.theme.addShopifyProducts(products);
-  })
+  // const getProducts = async () => {
+  //   const response = await state.client.product.fetchAll((products) => {
+  //     return products.json();
+  //   })
+  //   actions.theme.addShopifyProducts(response);
+  // };
+
+  useEffect(() => {
+    state.client.product.fetch('5790303813786')
+      .then(products => products.json())
+      .then((products => actions.theme.addShopifyProducts(products)))
+  }, []);
 
 
   return (
     <Container>
       <Title>{post.title.rendered}</Title>
       <ProductsContainer>
-        {state.theme.shopifyProducts.length > 0 && <h2>Hello</h2>}
+        {state.theme.shopifyProducts}
       </ProductsContainer>
     </Container>
   );
