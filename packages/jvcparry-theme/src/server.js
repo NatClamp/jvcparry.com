@@ -9,17 +9,15 @@ config();
 const client = Client.buildClient({
   domain: 'jvcparry.myshopify.com/',
   storefrontAccessToken: '6488f139d8c7b8de76ef7c6c45af0a2a',
-});
+}, fetch);
 
-console.log('CLIENT HERE', client)
-
-// // Fetch all products in your shop
+// Fetch all products in your shop
 // client.product.fetchAll().then((products) => {
 //   // Do something with the products
-//   console.log(products);
-// });
+//   console.log(products[0].id);
+// }).catch(e => console.log(e));
 
-// client.product.fetch('5790303813786').then(products => products.json()).then(products => console.log(products))
+client.product.fetch('Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU3OTAzMDM4MTM3ODY=').then(product => console.log(product.title, product.description)).catch((e) => console.log(e))
 
 
 export default {
