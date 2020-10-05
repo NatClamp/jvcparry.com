@@ -12,11 +12,11 @@ const Shop = ({ state, actions, libraries }) => {
   //   actions.theme.addShopifyProducts(response);
   // };
 
-  useEffect(() => {
-    state.client.product.fetch('5790303813786')
-      .then(products => products.json())
-      .then((products => actions.theme.addShopifyProducts(products)))
-  }, []);
+  // useEffect(() => {
+  //   state.theme.client.product.fetch('5790303813786')
+  //     .then(products => products.json())
+  //     .then((products => actions.theme.addShopifyProducts(products)))
+  // }, []);
 
 
   return (

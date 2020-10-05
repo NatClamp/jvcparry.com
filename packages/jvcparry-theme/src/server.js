@@ -11,6 +11,17 @@ const client = Client.buildClient({
   storefrontAccessToken: '6488f139d8c7b8de76ef7c6c45af0a2a',
 });
 
+console.log('CLIENT HERE', client)
+
+// // Fetch all products in your shop
+// client.product.fetchAll().then((products) => {
+//   // Do something with the products
+//   console.log(products);
+// });
+
+// client.product.fetch('5790303813786').then(products => products.json()).then(products => console.log(products))
+
+
 export default {
   ...packageClient,
   actions: {
@@ -19,6 +30,8 @@ export default {
     }
   },
   state: {
-    client: client,
+    theme: {
+      client,
+    }
   }
 };
