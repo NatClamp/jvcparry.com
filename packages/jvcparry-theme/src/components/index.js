@@ -1,5 +1,5 @@
-import React from "react";
-import { Global, css, connect, styled, Head } from "frontity";
+import React, { useEffect } from "react";
+import { Global, css, connect, styled, Head, fetch } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
 import List from "./list";
@@ -13,15 +13,28 @@ import Hire from "./hire";
 import HomeHero from "./home-hero";
 import Footer from "./footer";
 
+import Client from 'shopify-buy';
+
+
 
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
-const Theme = ({ state }) => {
+const Theme = ({ state, actions, libraries }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  console.log(data)
+
+  useEffect(() => {
+    const client = Client.buildClient({
+      domain: 'jvcparry.myshopify.com/',
+      storefrontAccessToken: '6488f139d8c7b8de76ef7c6c45af0a2a',
+    }, fetch);
+
+    client.product.fetchAll()
+      .then((products => actions.theme.addShopifyProducts(products)))
+  }, []);
+
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
@@ -46,7 +59,7 @@ const Theme = ({ state }) => {
         <Switch>
           <Loading when={data.isFetching} />
           <Home when={data.isHome} />
-          <Shop when={data.route === "/shop/"} />
+          <Shop when={data.route === "/shop/"} products={state.theme.shopifyProducts} />
           <Hire when={data.route === "/hire-me/"} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

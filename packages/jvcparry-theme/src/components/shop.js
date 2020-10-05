@@ -1,29 +1,18 @@
 import { React, useEffect } from 'react'
 import { connect, styled, fetch } from "frontity";
+import ShopifyBuyButton from "./shopify-buy-button";
 
 const Shop = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
 
-  // const getProducts = async () => {
-  //   const response = await state.client.product.fetchAll((products) => {
-  //     return products.json();
-  //   })
-  //   actions.theme.addShopifyProducts(response);
-  // };
-
-  // useEffect(() => {
-  //   state.theme.client.product.fetch('5790303813786')
-  //     .then(products => products.json())
-  //     .then((products => actions.theme.addShopifyProducts(products)))
-  // }, []);
-
-
   return (
     <Container>
       <Title>{post.title.rendered}</Title>
       <ProductsContainer>
-        {state.theme.shopifyProducts}
+        {state.theme.shopifyProducts.map(product =>
+          <ShopifyBuyButton key={product.id} product={product} />
+        )}
       </ProductsContainer>
     </Container>
   );
@@ -46,8 +35,7 @@ const Title = styled.h1`
 
 const ProductsContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-`;
+  justify-content: space-between;
+  align-items: flex-start;
 
-const ProductCard = styled.div``;
+`;
