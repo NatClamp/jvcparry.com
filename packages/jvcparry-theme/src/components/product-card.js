@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { connect, styled, fetch } from "frontity";
+import Link from "./link";
 
 
-const ShopifyBuyButton = (props) => {
+const ProductCard = (props) => {
 
   return (
-    <Card>
+    <Card link={props.product.handle}>
       <img src={props.product.images[0].src} />
       <CardTitle>{props.product.title}</CardTitle>
       <CardDescription>{props.product.description}</CardDescription>
@@ -13,9 +14,9 @@ const ShopifyBuyButton = (props) => {
   );
 };
 
-export default connect(ShopifyBuyButton);
+export default connect(ProductCard);
 
-const Card = styled.div`
+const Card = styled(Link)`
   display: flex;
   flex-direction: column;
   width: 30%;

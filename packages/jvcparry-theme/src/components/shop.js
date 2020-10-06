@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react'
 import { connect, styled, fetch } from "frontity";
-import ShopifyBuyButton from "./shopify-buy-button";
+import ProductCard from "./product-card";
 
 const Shop = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
@@ -11,7 +11,7 @@ const Shop = ({ state, actions, libraries }) => {
       <Title>{post.title.rendered}</Title>
       <ProductsContainer>
         {state.theme.shopifyProducts.map(product =>
-          <ShopifyBuyButton key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} />
         )}
       </ProductsContainer>
     </Container>

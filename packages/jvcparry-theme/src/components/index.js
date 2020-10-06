@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Global, css, connect, styled, Head, fetch } from "frontity";
 import Switch from "@frontity/components/switch";
+import Client from 'shopify-buy';
 import Header from "./header";
 import List from "./list";
 import Post from "./post";
@@ -9,23 +10,20 @@ import Title from "./title";
 import PageError from "./page-error";
 import Home from "./home";
 import Shop from "./shop";
+import ProductPage from "./product-page";
 import Hire from "./hire";
 import HomeHero from "./home-hero";
 import Footer from "./footer";
-
-import Client from 'shopify-buy';
-
-
 
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
 const Theme = ({ state, actions, libraries }) => {
-  // Get information about the current URL.
-  const data = state.source.get(state.router.link);
 
   useEffect(() => {
+    actions.source.fetch("/");
+
     const client = Client.buildClient({
       domain: 'jvcparry.myshopify.com/',
       storefrontAccessToken: '6488f139d8c7b8de76ef7c6c45af0a2a',
@@ -34,6 +32,11 @@ const Theme = ({ state, actions, libraries }) => {
     client.product.fetchAll()
       .then((products => actions.theme.addShopifyProducts(products)))
   }, []);
+
+
+
+  // Get information about the current URL.
+  const data = state.source.get(state.router.link);
 
   return (
     <>
@@ -60,6 +63,7 @@ const Theme = ({ state, actions, libraries }) => {
           <Loading when={data.isFetching} />
           <Home when={data.isHome} />
           <Shop when={data.route === "/shop/"} products={state.theme.shopifyProducts} />
+          <ProductPage when={data.isProductPage} />
           <Hire when={data.route === "/hire-me/"} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

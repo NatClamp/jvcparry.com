@@ -2,6 +2,14 @@ import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 
+const productPageHandler = {
+  name: "product",
+  pattern: "/shop/:slug",
+  func: ({ state }) => {
+    state.source.data[state.router.link].isProductPage = true
+  }
+}
+
 const jvcparryTheme = {
   name: "@frontity/jvcparry-theme",
   roots: {
@@ -24,7 +32,7 @@ const jvcparryTheme = {
         showOnPost: false,
       },
       shopifyProducts: [],
-
+      singleShopifyProduct: [],
     },
   },
   /**
@@ -33,6 +41,9 @@ const jvcparryTheme = {
    */
   actions: {
     theme: {
+      init: ({ libraries }) => {
+        libraries.source.handlers.push(productPageHandler);
+      },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
       },
@@ -41,6 +52,9 @@ const jvcparryTheme = {
       },
       addShopifyProducts: ({ state }) => products => {
         state.theme.shopifyProducts = [...products];
+      },
+      addShopifySingleProduct: ({ state }) => product => {
+        state.theme.singleShopifyProduct = product;
       },
     },
   },
